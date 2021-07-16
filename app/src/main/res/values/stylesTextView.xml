@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="TextStyle.Header" parent="Theme.Bimed">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyle.Header1" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/scale_3x</item>
+    </style>
+
+    <style name="TextStyle.Header2" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_bold</item>
+        <item name="android:textSize">@dimen/scale_2.5x</item>
+    </style>
+
+    <style name="TextStyle.Header3" parent="TextStyle.Header">
+        <item name="android:fontFamily">@font/inter_semi_bold</item>
+        <item name="android:textSize">@dimen/scale_2.25x</item>
+    </style>
+
+    <style name="TextStyle.Content" parent="Theme.Bimed">
+        <item name="android:textSize">@dimen/scale_1.75x</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+    </style>
+
+    <style name="TextStyle.Content.Gray2">
+        <item name="android:textColor">@color/gray_2</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryGray">
+        <item name="android:textColor">@color/secondary_gray</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryGray2">
+        <item name="android:textColor">@color/secondary_gray_2</item>
+    </style>
+
+    <style name="TextStyle.Content.Black">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryWhite">
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="TextStyle.Content.Blue">
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="TextStyle.Content.SecondaryPurpleDark">
+        <item name="android:textColor">@color/purple_dark</item>
+    </style>
+
+    <style name="TextStyle.Help" parent="Theme.Bimed">
+        <item name="android:includeFontPadding">false</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">@dimen/scale_1.5x</item>
+    </style>
+
+</resources>

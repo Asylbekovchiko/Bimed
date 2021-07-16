@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Bimed</string>
+    <string name="error_network">Ошибка сети</string>
+    <string name="error_server">Ошибка сервера</string>
+    <string name="error_not_found">Не найдена страница</string>
+    <string name="error_big_file">Слишком большой размер файла</string>
+    <string name="try_again">Поторить еще</string>
+    <string name="Menu">Меню</string>
+    <string name="Main">Главная</string>
+    <string name="Qr_code">Qr code</string>
+    <string name="Categories">Категории</string>
+    <string name="Basket">Корзина</string>
+    <string name="phone_number_kg_mask">+ 996 (xxx) xxx xxx</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Enter">Вход</string>
+    <string name="or">или</string>
+    <string name="Register">Зарегистрироваться</string>
+    <string name="Enter2">Войти</string>
+    <string name="Number">Номер</string>
+    <string name="Phone_number">Номер телефона</string>
+    <string name="Invalid_input_phone_number">Неправильно введен номер</string>
+    <string name="Confirmation_phone_number">Подтверждение номера телефона</string>
+    <string name="Send_again_after_1s_2s">Отправить снова через 0:59</string>
+    <string name="Sms_didnt_come">Не пришло SMS сообщение?</string>
+    <string name="Confirm">Подтвердить</string>
+    <string name="Input_confirmation_code">Введите код подтверждения</string>
+    <string name="Invalid_phone_number">Неверный номер телефона?</string>
+    <string name="You_registered_successfuly">Вы успешно зарегистрировались</string>
+    <string name="On_main">На главную</string>
+</resources>

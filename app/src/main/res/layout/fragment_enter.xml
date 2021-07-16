@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.auth.enter.EnterFragment">
+
+    <include
+        android:id="@+id/incl_toolbar"
+        layout="@layout/layout_toolbar_center_align" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="0dp"
+        android:text="@string/Enter"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/incl_toolbar"
+        android:layout_marginTop="@dimen/dp_2x"
+        style="@style/TextStyle.Header1"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_header"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="@dimen/dp_6x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start">
+
+        <kg.sunrise.bimed.ui.views.PhoneNumberInputView
+            android:id="@+id/tiv_phone_number"
+            android:layout_width="0dp"
+            app:label="@string/Number"
+            app:hint="@string/Phone_number"
+            app:errorText="@string/Invalid_input_phone_number"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_1.5x"
+            app:layout_constraintBottom_toTopOf="@id/btn_enter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_enter"
+            style="@style/ButtonStyle.Blue"
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/dp_1x"
+            android:text="@string/Enter2"
+            app:layout_constraintBottom_toTopOf="@id/tv_or"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_or"
+            android:layout_width="0dp"
+            app:layout_constraintBottom_toTopOf="@id/btn_registration"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_1x"
+            android:layout_height="wrap_content"
+            style="@style/TextStyle.Content.SecondaryGray"
+            android:text="@string/or" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_registration"
+            android:layout_width="0dp"
+            android:text="@string/Register"
+            style="@style/ButtonStyle.StrokeLight"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_2x" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_2x" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
