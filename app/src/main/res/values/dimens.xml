@@ -35,6 +35,7 @@
 
     <dimen name="bottom_nav_height">60dp</dimen>
     <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="menu_item_height">44dp</dimen>
 
     <!-- icon size -->
     <dimen name="icon_arrow_size">24dp</dimen>

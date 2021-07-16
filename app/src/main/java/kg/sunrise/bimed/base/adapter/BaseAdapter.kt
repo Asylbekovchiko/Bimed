@@ -6,7 +6,9 @@ abstract class BaseAdapter<Item, VH: BaseVH<Item>> : RecyclerView.Adapter<VH>() 
 
     protected val items = ArrayList<Item>()
 
-    override fun onBindViewHolder(holder: VH, position: Int) = holder.bind(items[position])
+    override fun onBindViewHolder(holder: VH, position: Int) {
+        holder.bind(items[position])
+    }
 
     override fun getItemCount() = items.size
 
