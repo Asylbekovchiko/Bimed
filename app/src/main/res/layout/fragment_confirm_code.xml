@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.auth.confirmCode.ConfirmCodeFragment">
+
+    <include
+        android:id="@+id/incl_toolbar"
+        layout="@layout/layout_toolbar_center_align" />
+
+    <TextView
+        android:id="@+id/tv_header"
+        android:layout_width="0dp"
+        android:text="@string/Confirmation_phone_number"
+        app:layout_constraintStart_toStartOf="@id/guideline_start"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintTop_toBottomOf="@id/incl_toolbar"
+        android:layout_marginTop="@dimen/dp_2x"
+        style="@style/TextStyle.Header1"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_header"
+        app:layout_constraintVertical_bias="1.0"
+        android:layout_marginBottom="@dimen/dp_6x"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline_end"
+        app:layout_constraintStart_toStartOf="@id/guideline_start">
+
+        <TextView
+            android:id="@+id/tv_phone_number"
+            style="@style/TextStyle.Header3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/dp_0.25x"
+            app:layout_constraintBottom_toTopOf="@id/tv_invalid_phone_number"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="@tools:sample/us_phones" />
+
+        <TextView
+            android:id="@+id/tv_invalid_phone_number"
+            android:layout_width="0dp"
+            style="@style/TextStyle.Content.Blue"
+            android:layout_marginBottom="@dimen/dp_3x"
+            android:text="@string/Invalid_phone_number"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/tiv_confirmation_code"
+            android:layout_height="wrap_content" />
+
+        <kg.sunrise.bimed.ui.views.TextInputView
+            android:id="@+id/tiv_confirmation_code"
+            android:layout_width="0dp"
+            android:layout_marginBottom="@dimen/dp_1.5x"
+            app:hint="@string/Input_confirmation_code"
+            app:layout_constraintBottom_toTopOf="@id/btn_confirm"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_height="@dimen/btn_height" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            style="@style/ButtonStyle.Blue"
+            android:text="@string/Confirm"
+            android:layout_marginBottom="@dimen/dp_3x"
+            app:layout_constraintBottom_toTopOf="@id/tv_sms_didnt_come"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tv_sms_didnt_come"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/Sms_didnt_come"
+            android:gravity="center"
+            android:layout_marginBottom="@dimen/dp_0.5x"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/btn_send_sms_again" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_send_sms_again"
+            android:layout_width="0dp"
+            android:text="@string/Send_again_after_1s_2s"
+            style="@style/ButtonStyle.StrokeSecondaryGray"
+            android:layout_height="@dimen/btn_height"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        tools:visibility="gone" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="@dimen/dp_2x" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="@dimen/dp_2x" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
