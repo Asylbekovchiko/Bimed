@@ -36,4 +36,9 @@
     <string name="Profile">Профиль</string>
     <string name="Favourites">Избранное</string>
     <string name="Orders_history">История заказов</string>
+    <string name="Feedback">Обратная связь</string>
+    <string name="App_language">Язык приложения:</string>
+    <string name="WholeSalers">Оптовикам</string>
+    <string name="Rus">Рус</string>
+    <string name="Eng">Eng</string>
 </resources>

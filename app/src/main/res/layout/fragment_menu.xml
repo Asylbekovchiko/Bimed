@@ -16,8 +16,9 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:overScrollMode="never"
-            android:paddingHorizontal="@dimen/dp_1x"
-            android:paddingVertical="@dimen/dp_1.5x"
+            android:layout_marginVertical="@dimen/dp_1.5x"
+            android:paddingBottom="@dimen/dp_1x"
+            android:layout_marginHorizontal="@dimen/dp_1x"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -32,6 +33,21 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_width="0dp"
             android:layout_height="1dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_menu_options"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/dp_1x"
+            android:layout_marginVertical="@dimen/dp_1.5x"
+            android:overScrollMode="never"
+            android:paddingBottom="@dimen/dp_1x"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_feed" />
 
         <include
             android:id="@+id/incl_progress"

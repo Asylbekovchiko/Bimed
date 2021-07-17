@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    app:cardElevation="0dp"
+    android:layout_marginTop="@dimen/dp_1x"
+    android:layout_height="@dimen/menu_option_height"
+    app:cardCornerRadius="@dimen/dp_1.5x">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_content"
+        android:layout_marginHorizontal="@dimen/dp_1.5x"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_title"
+            style="@style/TextStyle.Content.Gray"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@tools:sample/cities" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cl_tabs"
+            android:layout_width="136dp"
+            android:layout_height="42dp"
+            android:background="@drawable/shape_light2_rad_12dp"
+            android:padding="2dp"
+            android:layout_marginStart="@dimen/dp_1.5x"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tv_title"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/l_tab"
+                android:layout_width="match_parent"
+                android:layout_height="38dp"
+                android:background="@drawable/shape_light2_rad_12dp"
+                app:layout_constraintBottom_toBottomOf="@id/cl_tabs"
+                app:layout_constraintEnd_toEndOf="@id/cl_tabs"
+                app:layout_constraintStart_toStartOf="@id/cl_tabs"
+                app:layout_constraintTop_toTopOf="@id/cl_tabs"
+                app:tabIndicator="@drawable/shape_blue_rad_10dp"
+                app:tabIndicatorColor="@color/blue"
+                app:tabIndicatorHeight="38dp"
+                app:tabTextAppearance="@style/TabLayout.TextAppearance"
+                app:tabRippleColor="@color/white"
+                app:tabSelectedTextColor="@color/white" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

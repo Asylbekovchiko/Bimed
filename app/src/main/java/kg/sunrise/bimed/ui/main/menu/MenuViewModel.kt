@@ -2,12 +2,37 @@ package kg.sunrise.bimed.ui.main.menu
 
 import kg.sunrise.bimed.R
 import kg.sunrise.bimed.base.viewModel.BaseViewModel
+import kg.sunrise.bimed.dto.MenuDTO
 import kg.sunrise.bimed.ui.main.menu.adapter.MenuItem
+import kg.sunrise.bimed.ui.main.menu.adapter.MenuOption
 import kg.sunrise.bimed.ui.main.menu.adapter.MenuType
 
 class MenuViewModel : BaseViewModel() {
 
-    fun getMenuItems(isAuthorized: Boolean): ArrayList<MenuItem> {
+    public fun getMenuDTO(isAuthorized: Boolean): MenuDTO {
+        val menuItems = getMenuItems(isAuthorized)
+        val menuOptions = getMenuOptions(isAuthorized)
+
+        return MenuDTO(menuItems, menuOptions)
+    }
+
+    // MARK: - Menu Options
+    private fun getMenuOptions(isAuthorized: Boolean): ArrayList<MenuOption> {
+        val items = arrayListOf(
+            MenuOption.FeedItem(R.string.Feedback),
+            MenuOption.AppLangItem(R.string.App_language)
+        )
+
+        if (isAuthorized) {
+            val item = MenuOption.WholeSalersItem(R.string.WholeSalers)
+            items.add(1, item)
+        }
+
+        return items
+    }
+
+    // MARK: - Menu Items
+    private fun getMenuItems(isAuthorized: Boolean): ArrayList<MenuItem> {
         val items =
             if (isAuthorized)
                 getAuthorizedMenuItems()
