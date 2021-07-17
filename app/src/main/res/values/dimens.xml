@@ -35,6 +35,7 @@
 
     <dimen name="bottom_nav_height">60dp</dimen>
     <dimen name="toolbar_height">48dp</dimen>
+    <dimen name="menu_item_height">44dp</dimen>
 
     <!-- icon size -->
     <dimen name="icon_arrow_size">24dp</dimen>
@@ -55,4 +56,5 @@
     <dimen name="icon_item_detail_size">24dp</dimen>
 <!--    размеры иконок на страничке контактов-->
     <dimen name="icon_contact_item_size">20dp</dimen>
+    <dimen name="menu_option_height">42dp</dimen>
 </resources>

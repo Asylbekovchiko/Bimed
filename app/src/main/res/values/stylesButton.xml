@@ -52,9 +52,18 @@
         <item name="android:enabled">false</item>
     </style>
 
-    <style name="ButtonStyle.Small.Light2" parent="ButtonStyle">
-        <item name="backgroundTint">@color/light</item>
+    <style name="ButtonStyle.Small.Blue" parent="ButtonStyle">
+        <item name="backgroundTint">@color/blue</item>
         <item name="android:enabled">true</item>
+        <item name="cornerRadius">@dimen/dp_1.5x</item>
+        <item name="android:layout_height">38dp</item>
+    </style>
+
+    <style name="ButtonStyle.Small.Simple" parent="ButtonStyle">
+        <item name="backgroundTint">@color/light_2</item>
+        <item name="android:enabled">true</item>
+        <item name="cornerRadius">@dimen/dp_1.5x</item>
+        <item name="android:layout_height">38dp</item>
     </style>
 
     <dimen name="btn_height">44dp</dimen>

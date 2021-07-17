@@ -3,11 +3,14 @@ package kg.sunrise.bimed.utils.preference
 import android.content.Context
 import androidx.core.content.edit
 
-private const val SETTING_STORAGE_NAME = "dasslerpro.sunrise"
+private const val SETTING_STORAGE_NAME = "bimed.sunrise"
 private const val IS_FIRST_TIME = "IS_FIRST_TIME"
 private const val TOKEN = "TOKEN"
 const val DEFAULT_TOKEN_VALUE = "empty"
 private const val DEVICE_TOKEN = "device_token"
+private const val LANGUAGE_KEY = "LANGUAGE"
+const val LANGUAGE_RU = "ru"
+const val LANGUAGE_KG = "ky"
 
 private fun pref(context: Context) = context.getSharedPreferences(SETTING_STORAGE_NAME, Context.MODE_PRIVATE)
 
@@ -43,3 +46,11 @@ fun setDeviceToken(context: Context, deviceToken: String) =
 
 fun getDeviceToken(context: Context) =
     getString(context, DEVICE_TOKEN, DEFAULT_TOKEN_VALUE)
+
+fun setLocalization(context: Context, lang: String) {
+    editString(context, LANGUAGE_KEY, lang)
+}
+
+fun getLocalization(context: Context): String {
+    return getString(context, LANGUAGE_KEY, LANGUAGE_RU)
+}

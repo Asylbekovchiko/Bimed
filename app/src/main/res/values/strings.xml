@@ -28,4 +28,17 @@
     <string name="Invalid_phone_number">Неверный номер телефона?</string>
     <string name="You_registered_successfuly">Вы успешно зарегистрировались</string>
     <string name="On_main">На главную</string>
+    <string name="Filials">Филиалы</string>
+    <string name="News">Новости</string>
+    <string name="About_company">О компании</string>
+    <string name="Help">Помощь</string>
+    <string name="Contacts">Контакты</string>
+    <string name="Profile">Профиль</string>
+    <string name="Favourites">Избранное</string>
+    <string name="Orders_history">История заказов</string>
+    <string name="Feedback">Обратная связь</string>
+    <string name="App_language">Язык приложения:</string>
+    <string name="WholeSalers">Оптовикам</string>
+    <string name="Rus">Рус</string>
+    <string name="Eng">Eng</string>
 </resources>

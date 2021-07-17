@@ -30,6 +30,10 @@
         <item name="android:textColor">@color/gray_2</item>
     </style>
 
+    <style name="TextStyle.Content.Gray">
+        <item name="android:textColor">@color/gray</item>
+    </style>
+
     <style name="TextStyle.Content.SecondaryGray">
         <item name="android:textColor">@color/secondary_gray</item>
     </style>
@@ -59,6 +63,13 @@
         <item name="android:textColor">@color/black</item>
         <item name="android:fontFamily">@font/inter_regular</item>
         <item name="android:textSize">@dimen/scale_1.5x</item>
+    </style>
+
+    <style name="TabLayout.TextAppearance" parent="">
+        <item name="textAllCaps">false</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:fontFamily">@font/inter_medium</item>
+        <item name="android:textSize">@dimen/scale_1.75x</item>
     </style>
 
 </resources>

@@ -50,7 +50,6 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             R.navigation.categories_nav_graph,
             R.navigation.basket_nav_graph
         )
-        binding.bottomNav.setSelectedItemId(R.id.home_nav_graph)
 
         val controller = bottomNavigation.setupWithNavController(
             navGraphIds = navGraphIds,
@@ -59,6 +58,7 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             intent = intent
         )
 
+        binding.bottomNav.setSelectedItemId(R.id.home_nav_graph)
 
         controller.observe(this) {
             it.addOnDestinationChangedListener { controller, destination, arguments ->
