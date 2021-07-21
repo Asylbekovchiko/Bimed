@@ -37,7 +37,7 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    <EditText
+    <com.santalu.maskara.widget.MaskEditText
         android:id="@+id/et_input"
         android:layout_width="0dp"
         android:layout_height="@dimen/btn_height"

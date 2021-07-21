@@ -24,7 +24,7 @@ class EnterFragment : BaseFragmentWithVM<FragmentEnterBinding, AuthViewModel>() 
     override fun findTypeOfObject(data: Any?) {
         when (data) {
             PHONE_NUMBER -> {
-                navigateToConfirmCode(binding.tivPhoneNumber.getPhoneNumber())
+                navigateToConfirmCode(binding.tivPhoneNumber.getPhoneWithMask())
             }
         }
     }
@@ -47,7 +47,7 @@ class EnterFragment : BaseFragmentWithVM<FragmentEnterBinding, AuthViewModel>() 
         binding.apply {
             btnEnter.setOnClickListener {
                 //todo: make check on phonenumber
-                viewModel.enterWithPhoneNumber(binding.tivPhoneNumber.getPhoneNumber())
+                viewModel.enterWithPhoneNumber(binding.tivPhoneNumber.getPhone())
             }
 
             btnRegistration.setOnClickListener {

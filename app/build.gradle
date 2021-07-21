@@ -90,4 +90,7 @@ dependencies {
 
     //Input Mask
     implementation 'com.github.santalu:maskara:1.0.0'
+
+    // country codes
+    implementation 'com.hbb20:ccp:2.5.0'
 }
