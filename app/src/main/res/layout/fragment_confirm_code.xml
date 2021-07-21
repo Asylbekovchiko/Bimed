@@ -63,7 +63,7 @@
             app:layout_constraintBottom_toTopOf="@id/btn_confirm"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:layout_height="@dimen/btn_height" />
+            android:layout_height="wrap_content" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_confirm"

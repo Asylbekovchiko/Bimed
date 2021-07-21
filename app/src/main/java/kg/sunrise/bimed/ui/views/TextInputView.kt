@@ -12,6 +12,7 @@ import android.widget.TextView
 import androidx.annotation.ColorRes
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.widget.addTextChangedListener
+import com.santalu.maskara.widget.MaskEditText
 import kg.sunrise.bimed.R
 import kg.sunrise.bimed.utils.extensions.getColorCompat
 import kg.sunrise.bimed.utils.extensions.gone
@@ -27,7 +28,7 @@ open class TextInputView @JvmOverloads constructor(
     protected lateinit var clLabelContainer: ConstraintLayout
     protected lateinit var tvLabel: TextView
     protected lateinit var tvStar: TextView
-    protected lateinit var etInput: EditText
+    protected lateinit var etInput: MaskEditText
     protected lateinit var tvError: TextView
     protected lateinit var ivIcon: ImageView
 
@@ -56,8 +57,6 @@ open class TextInputView @JvmOverloads constructor(
 
         setUpEditText(styledAttrs)
 
-
-
         if (styledAttrs.hasValue(R.styleable.TextInputView_editTextIcon)) {
             ivIcon.setImageDrawable(styledAttrs.getDrawable(R.styleable.TextInputView_editTextIcon))
             ivIcon.visible()
@@ -74,8 +73,8 @@ open class TextInputView @JvmOverloads constructor(
         return etInput.text.toString()
     }
 
-    fun setInputTextFocusable(isFocusable: Boolean) {
-        etInput.isFocusable = isFocusable
+    protected open fun setLayoutEnabled(isEnabled: Boolean) {
+        etInput.isFocusable = isEnabled
     }
 
     fun addTextChangedListener(onChange: (editText: EditText) -> Unit) {
@@ -102,14 +101,6 @@ open class TextInputView @JvmOverloads constructor(
 
     fun hideKeyboard() {
         etInput.hideKeyboard()
-    }
-
-    fun disableEditText() {
-        etInput.isEnabled = false
-    }
-
-    fun enableEditText() {
-        etInput.isEnabled = true
     }
 
     private fun setDefaultViewsColor() {
