@@ -46,4 +46,6 @@
     <string name="Lastname">Фамилия</string>
     <string name="Name">Имя</string>
     <string name="Have_an_account">Есть аккаунт?</string>
+    <string name="accumulated_points">Накопленных баллов</string>
+    <string name="Provide_qr_code_for_getting_points">Покажите QR код для получения балла</string>
 </resources>

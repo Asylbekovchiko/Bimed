@@ -1,8 +1,98 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/secondary_gray_light"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_gray"
     tools:context=".ui.main.qrCode.QrCodeFragment">
-</FrameLayout>
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_marginTop="48dp"
+        android:layout_marginStart="@dimen/dp_2.5x"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@tools:sample/first_names"
+        app:layout_constraintStart_toStartOf="parent"
+        style="@style/TextStyle.Header1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/inter_extra_bold"
+        android:textColor="@color/purple_dark" />
+
+    <ImageView
+        android:layout_marginStart="@dimen/dp_1.5x"
+        app:layout_constraintStart_toEndOf="@id/tv_name"
+        android:layout_width="68dp"
+        app:layout_constraintTop_toTopOf="@id/tv_name"
+        android:layout_height="28dp"
+        android:src="@drawable/ic_vip_crown" />
+
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_name"
+        app:layout_constraintStart_toStartOf="@id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1.5x"
+        android:fontFamily="@font/inter_extra_bold"
+        android:textSize="40sp"
+        android:textColor="@color/green"
+        tools:text="@tools:sample/us_zipcodes"
+        android:id="@+id/tv_points" />
+
+    <TextView
+        style="@style/TextStyle.Content.SecondaryGray2"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_1x"
+        android:fontFamily="@font/inter_bold"
+        android:text="@string/accumulated_points"
+        app:layout_constraintBottom_toBottomOf="@id/tv_points"
+        app:layout_constraintStart_toEndOf="@id/tv_points"
+        app:layout_constraintTop_toTopOf="@id/tv_points" />
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="278dp"
+        android:background="@drawable/shape_blue_topradius_16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/shape_blue_radius_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="116dp"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:id="@+id/v_border" />
+
+    <ImageView
+        android:scaleType="fitXY"
+        android:id="@+id/iv_qr_code"
+        android:layout_width="@dimen/qr_code_size"
+        android:layout_height="@dimen/qr_code_size"
+        app:layout_constraintBottom_toBottomOf="@id/v_border"
+        app:layout_constraintEnd_toEndOf="@id/v_border"
+        app:layout_constraintStart_toStartOf="@id/v_border"
+        app:layout_constraintTop_toTopOf="@id/v_border" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:text="@string/Provide_qr_code_for_getting_points"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        style="@style/TextStyle.Content.Light2"
+        android:gravity="center_horizontal"
+        app:layout_constraintTop_toBottomOf="@id/v_border"
+        android:layout_marginTop="@dimen/dp_2.25x" />
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

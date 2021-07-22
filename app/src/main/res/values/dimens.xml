@@ -57,4 +57,5 @@
 <!--    размеры иконок на страничке контактов-->
     <dimen name="icon_contact_item_size">20dp</dimen>
     <dimen name="menu_option_height">42dp</dimen>
+    <dimen name="qr_code_size">264dp</dimen>
 </resources>
