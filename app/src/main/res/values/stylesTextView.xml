@@ -42,6 +42,10 @@
         <item name="android:textColor">@color/secondary_gray_2</item>
     </style>
 
+    <style name="TextStyle.Content.Light2">
+        <item name="android:textColor">@color/light_2</item>
+    </style>
+
     <style name="TextStyle.Content.Black">
         <item name="android:textColor">@color/black</item>
     </style>

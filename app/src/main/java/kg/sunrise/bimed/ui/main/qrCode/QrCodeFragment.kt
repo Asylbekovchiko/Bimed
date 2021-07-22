@@ -1,32 +1,42 @@
 package kg.sunrise.bimed.ui.main.qrCode
 
-import androidx.lifecycle.ViewModelProvider
-import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
+import androidx.constraintlayout.widget.ConstraintLayout
 import kg.sunrise.bimed.R
+import kg.sunrise.bimed.base.fragment.BaseFragmentWithVM
+import kg.sunrise.bimed.databinding.FragmentQrCodeBinding
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
-class QrCodeFragment : Fragment() {
+class QrCodeFragment : BaseFragmentWithVM<FragmentQrCodeBinding, QrCodeViewModel>() {
 
-    companion object {
-        fun newInstance() = QrCodeFragment()
+    override val viewModel: QrCodeViewModel by viewModel()
+    override val progressBar: ConstraintLayout by lazy {
+        binding.inclProgress.clProgress
     }
 
-    private lateinit var viewModel: QrCodeViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_qr_code, container, false)
+    override fun makeRequests() {
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(QrCodeViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun findTypeOfObject(data: Any?) {
     }
 
+    override fun successRequest() {
+    }
+
+    override fun inflateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?
+    ): FragmentQrCodeBinding {
+        return FragmentQrCodeBinding.inflate(inflater)
+    }
+
+    override fun init() {
+        setupQrCode("hello")
+    }
+
+    private fun setupQrCode(qrCode: String) {
+        val bitmap = viewModel.generateQrBitmap(qrCode, resources.getDimensionPixelSize(R.dimen.qr_code_size))
+        binding.ivQrCode.setImageBitmap(bitmap)
+    }
 }

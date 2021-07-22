@@ -93,4 +93,7 @@ dependencies {
 
     // country codes
     implementation 'com.hbb20:ccp:2.5.0'
+
+    // qr code generator
+    implementation 'com.github.kenglxn.QRGen:android:2.6.0'
 }

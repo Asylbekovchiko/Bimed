@@ -14,6 +14,7 @@ import kg.sunrise.bimed.databinding.ActivityMainBinding
 import kg.sunrise.bimed.ui.auth.AuthActivity
 import kg.sunrise.bimed.utils.extensions.setupWithNavController
 import kg.sunrise.bimed.utils.extensions.transitionFade
+import kg.sunrise.bimed.utils.preference.isAuthorized
 
 class MainActivity : BaseActivity<ActivityMainBinding>() {
 
@@ -68,6 +69,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
 //                } else {
 //                    bottomNavigation.gone()
 //                }
+            }
+        }
+
+        binding.bottomNav.setOnItemSelectedListener { item ->
+            if (item.title == getString(R.string.Qr_code) && !isAuthorized(this)) {
+                false
+            } else {
+                true
             }
         }
 
