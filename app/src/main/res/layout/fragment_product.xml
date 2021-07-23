@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.shared.productDetail.ProductFragment">
+
+    <include
+        android:id="@+id/incl_toolbar"
+        layout="@layout/layout_toolbar_center_align" />
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll_view"
+        android:overScrollMode="never"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/incl_toolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="0dp" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_image"
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_height="0dp"
+                app:layout_constraintDimensionRatio="1:1"
+                android:background="@color/red_FAE0E6" />
+
+            <kg.sunrise.bimed.ui.views.HorizontalDivider
+                android:layout_width="0dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/iv_image"
+                android:layout_height="1dp" />
+            
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/TextStyle.Header2"
+                android:layout_width="0dp"
+                android:text="Витамин С 900 мг 5 г порош.шипуч.№10 саше-пакет"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/iv_image"
+                android:layout_marginTop="38dp"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end" />
+
+            <TextView
+                android:layout_marginTop="@dimen/dp_3x"
+                android:id="@+id/tv_indication"
+                style="@style/TextStyle.Content.Gray2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Indications"
+                app:layout_constraintStart_toEndOf="@id/guideline_start"
+                app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+            <TextView
+                android:id="@+id/tv_content"
+                android:layout_width="0dp"
+                android:layout_marginTop="@dimen/dp_0.5x"
+                android:text="В качестве биологически активной добавки к пище, дополнительного источника витаминов и минералов."
+                app:layout_constraintTop_toBottomOf="@id/tv_indication"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                app:layout_constraintEnd_toEndOf="@id/guideline_end"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_recipe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/By_doctor_recipe"
+                style="@style/TextStyle.Content"
+                android:textColor="@color/orange"
+                android:paddingVertical="@dimen/dp_3x"
+                app:layout_constraintTop_toBottomOf="@id/tv_content"
+                app:layout_constraintStart_toStartOf="@id/guideline_start" />
+
+            <TextView
+                app:layout_constraintTop_toBottomOf="@id/tv_recipe"
+                app:layout_constraintStart_toStartOf="@id/guideline_start"
+                android:id="@+id/tv_share"
+                android:text="@string/Share"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_start"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_begin="@dimen/dp_2x" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline_end"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_end="@dimen/dp_2x" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bottom_sheet"
+        app:cardCornerRadius="16dp"
+        android:layout_width="0dp"
+        app:cardElevation="10dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <kg.sunrise.bimed.ui.views.ProductManipulationView
+            android:layout_width="match_parent"
+            android:paddingTop="@dimen/dp_2x"
+            android:paddingBottom="76dp"
+            app:itemType="detail"
+            android:paddingHorizontal="@dimen/dp_2x"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <include
+        android:id="@+id/incl_progress"
+        layout="@layout/layout_progress"
+        tools:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

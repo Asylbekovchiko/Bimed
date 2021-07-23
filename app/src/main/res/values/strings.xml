@@ -48,4 +48,9 @@
     <string name="Have_an_account">Есть аккаунт?</string>
     <string name="accumulated_points">Накопленных баллов</string>
     <string name="Provide_qr_code_for_getting_points">Покажите QR код для получения балла</string>
+    <string name="Indications">Показания</string>
+    <string name="By_doctor_recipe">По рецепту врача</string>
+    <string name="Share">Поделиться</string>
+    <string name="Price">Цена:</string>
+    <string name="price_value">$1%s c</string>
 </resources>

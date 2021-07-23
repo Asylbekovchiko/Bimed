@@ -7,6 +7,7 @@ import kg.sunrise.bimed.ui.main.home.HomeViewModel
 import kg.sunrise.bimed.ui.main.menu.MenuViewModel
 import kg.sunrise.bimed.ui.main.menu.feedback.FeedbackViewModel
 import kg.sunrise.bimed.ui.main.qrCode.QrCodeViewModel
+import kg.sunrise.bimed.ui.shared.productDetail.ProductViewModel
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 
@@ -18,4 +19,5 @@ val viewModelModule = module {
     viewModel { MenuViewModel() }
     viewModel { QrCodeViewModel() }
     viewModel { FeedbackViewModel() }
+    viewModel { ProductViewModel() }
 }
