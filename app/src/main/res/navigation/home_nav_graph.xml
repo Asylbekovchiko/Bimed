@@ -10,4 +10,13 @@
         android:name="kg.sunrise.bimed.ui.main.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/productFragment"
+        android:name="kg.sunrise.bimed.ui.shared.productDetail.ProductFragment"
+        android:label="fragment_product"
+        tools:layout="@layout/fragment_product" >
+    </fragment>
+
+    <action android:id="@+id/action_global_productFragment"
+        app:destination="@id/productFragment"/>
 </navigation>

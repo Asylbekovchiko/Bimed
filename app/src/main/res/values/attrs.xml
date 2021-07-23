@@ -8,4 +8,11 @@
         <attr name="errorText" format="string" />
         <attr name="editTextIcon" format="reference" />
     </declare-styleable>
+
+    <declare-styleable name="ProductManipulationView">
+        <attr name="itemType" format="enum">
+            <enum name="detail" value="0"/>
+            <enum name="adapter" value="1"/>
+        </attr>
+    </declare-styleable>
 </resources>
