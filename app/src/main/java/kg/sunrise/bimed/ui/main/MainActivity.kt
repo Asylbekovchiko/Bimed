@@ -72,13 +72,14 @@ class MainActivity : BaseActivity<ActivityMainBinding>() {
             }
         }
 
-        binding.bottomNav.setOnItemSelectedListener { item ->
-            if (item.title == getString(R.string.Qr_code) && !isAuthorized(this)) {
-                false
-            } else {
-                true
-            }
-        }
+        // todo: fix non navigating issue
+//        binding.bottomNav.setOnItemSelectedListener { item ->
+//            if (item.title == getString(R.string.Qr_code) && !isAuthorized(this)) {
+//                false
+//            } else {
+//                true
+//            }
+//        }
 
         currentNavController = controller
     }
